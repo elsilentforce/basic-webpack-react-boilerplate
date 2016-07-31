@@ -14,12 +14,14 @@ const plugins =
 
 module.exports = {
   devtool: PRODUCTION ? false : 'cheap-module-eval-source-map',
-  entry: [
-    './main', // Your appʼs entry point
-  ],
+  entry: './main',
   output: {
-    path: path.join(__dirname, 'output', 'js'),
+    path: './',
     filename: 'react-app.js',
+  },
+  devServer: {
+    inline: true,
+    port: 8000
   },
   module: {
     loaders: [{
