@@ -14,9 +14,7 @@ const plugins =
 
 module.exports = {
   devtool: PRODUCTION ? false : 'cheap-module-eval-source-map',
-  entry: [
-    './main', // Your appʼs entry point
-  ],
+  entry: './main',
   output: {
     path: path.join(__dirname, 'output', 'js'),
     filename: 'react-app.js',
